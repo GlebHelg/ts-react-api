@@ -3,22 +3,14 @@ import "./CurrencySelector.css";
 
 const CurrencySelector = () => {
   return (
-    <div className="main-grid">
-      <div className="heading">
-      heading
-      </div>
-      <div className="api-connector-wrapper">
-      api-connector-wrapper
-      </div>
-      <div className="currency-selector-wrapper">
-      currency-selector-wrapper
-      </div>
-      <div className="date-selector-wrapper">
-      date-selector-wrapper
-      </div>
-      <div className="response-presentation-wrapper">
-      response-presentation-wrapper
-      </div>
+    <div className="">
+      <label htmlFor="currencies">Choose a currency</label>
+      <select name="currencies" id="currencies">
+        <option value="usd">US Dollar</option>
+        <option value="nok">Norwegian krone</option>
+        <option value="gbp">Pound sterling</option>
+        <option value="sek">Svedish krone</option>
+      </select>
     </div>
   );
 }

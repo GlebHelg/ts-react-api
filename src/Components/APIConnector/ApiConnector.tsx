@@ -3,22 +3,13 @@ import "./ApiConnector.css";
 
 const ApiConnector = () => {
   return (
-    <div className="main-grid">
-      <div className="heading">
-      heading
-      </div>
-      <div className="api-connector-wrapper">
-      api-connector-wrapper
-      </div>
-      <div className="currency-selector-wrapper">
-      currency-selector-wrapper
-      </div>
-      <div className="date-selector-wrapper">
-      date-selector-wrapper
-      </div>
-      <div className="response-presentation-wrapper">
-      response-presentation-wrapper
-      </div>
+    <div className="api-connector">
+      <p>Enter key below to query www. for data</p>
+      <form>
+        <label htmlFor="api-key-input">Enter API Key</label>
+        <input type="text" name="api-key-input" id="api-key-input" />
+        <button type="submit">Use key for query</button>
+      </form>
     </div>
   );
 }

@@ -1,13 +1,6 @@
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+.date-selector {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
 }
-    
-.heading { grid-area: 1 / 2 / 2 / 4; }
-.api-connector-wrapper { grid-area: 2 / 2 / 3 / 4; }
-.currency-selector-wrapper { grid-area: 3 / 1 / 4 / 3; }
-.date-selector-wrapper { grid-area: 3 / 3 / 4 / 5; }
-.response-presentation-wrapper { grid-area: 4 / 1 / 8 / 5; }

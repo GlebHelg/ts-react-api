@@ -3,7 +3,7 @@ import "./DateSelector.css";
 
 const DateSelector = () => {
   return (
-    <div className="">
+    <div className="date-selector">
       <label htmlFor="start">Choose Date</label>
 
       <input type="date" id="start" name="trip-start"

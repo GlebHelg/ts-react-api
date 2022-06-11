@@ -3,7 +3,7 @@ import "./CurrencySelector.css";
 
 const CurrencySelector = () => {
   return (
-    <div className="">
+    <div className="currency-selector">
       <label htmlFor="currencies">Choose a currency</label>
       <select name="currencies" id="currencies">
         <option value="usd">US Dollar</option>

@@ -3,7 +3,7 @@ import "./ResponsePresentation.css";
 
 const ResponsePresentation = () => {
   return (
-    <div className="">
+    <div className="response-presentation">
       ResponsePresentation
     </div>
   );

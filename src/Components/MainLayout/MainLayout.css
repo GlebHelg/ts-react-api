@@ -4,6 +4,12 @@
     grid-template-rows: repeat(7, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
 }
     
 .heading { grid-area: 1 / 2 / 2 / 4; }

@@ -7,11 +7,7 @@ import { IResponseData } from '../Interfaces/Interfaces';
 
 const MainLayout = () => {
 
-  let [responseData, setResponseData] = useState<IResponseData>({
-                                                  apiKey: '',
-                                                  currency: '',
-                                                  date: ''
-                                                });
+  let [responseData, setResponseData] = useState<IResponseData>({} as IResponseData);
 
   console.log('requestData: ', setResponseData);
 

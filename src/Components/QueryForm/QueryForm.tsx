@@ -19,10 +19,15 @@ const collectFormValues = (e: React.FormEvent<HTMLFormElement>) => {
     return formObjects;
 }
 
-const makeApiCall = (apiKey: string, currency: string, year: string, month: string, day: string) => {
-  const requestString = "https://v6.exchangerate-api.com/v6/YOUR-API-KEY/history/USD/YEAR/MONTH/DAY";
+const makeApiCall = (apiKey: string, currency: string, year: string, month: string, day: string, setStateRef: React.Dispatch<React.SetStateAction<IResponseData>>) => {
+  //const requestString = `https://v6.exchangerate-api.com/v6/${apiKey}/history/${currency}/${year}/${month}/${day}`; //requires plan upgrade
+  const requestString = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${currency}/`;
   axios.get(requestString)
-      .then(resp => console.log(resp));
+      .then(resp => {
+        const respData: IResponseData = resp.data as IResponseData;
+        console.log('respData: ', respData);
+
+      });
 }
 
 const getData = (e: React.FormEvent<HTMLFormElement>, setStateRef: React.Dispatch<React.SetStateAction<IResponseData>>) => {
@@ -31,13 +36,13 @@ const getData = (e: React.FormEvent<HTMLFormElement>, setStateRef: React.Dispatc
 
   console.log('formElements: ', formValues);
 
-  const apiKey = "";
-  const currency = "";
-  const year = ""
-  const month = "";
-  const day = "";
+  const apiKey = formValues[0].val;
+  const currency = formValues[1].val;
+  const year = formValues[2].val.split('-')[0];
+  const month = formValues[2].val.split('-')[1];
+  const day = formValues[2].val.split('-')[2];
 
-  makeApiCall(apiKey,	currency,	year,	month, day);
+  makeApiCall(apiKey,	currency,	year,	month, day, setStateRef);
 
   // setStateRef({
   //   apiKey: formValues[0].val,
@@ -57,7 +62,6 @@ const QueryForm = (props: IQueryFormProps) => {
         <div className="query-form">
           <APIKeySelector />
           <CurrencySelector />
-          <DateSelector />
           <div className='submit-btn-wrapper'>
             <button type="submit">Get Data</button>
           </div>

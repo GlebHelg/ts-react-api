@@ -24,7 +24,7 @@
     padding: 3px;
 }
 .currency-selector {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 3;
     text-align: center;
     border: 1px;
     border-style: solid;

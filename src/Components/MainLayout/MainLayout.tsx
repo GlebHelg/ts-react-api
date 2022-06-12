@@ -2,13 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "./MainLayout.css";
 import ResponsePresentation from '../ResponsePresentation/ResponsePresentation';
 import QueryForm from '../QueryForm/QueryForm';
+import { IResponseData } from '../Interfaces/Interfaces';
 
-
-interface IResponseData {
-  apiKey: string,
-  currency: string,
-  date: string
-}
 
 const MainLayout = () => {
 

@@ -3,6 +3,8 @@ import APIKeySelector from './APIKeySelector/APIKeySelector';
 import CurrencySelector from './CurrencySelector/CurrencySelector';
 import DateSelector from './DateSelector/DateSelector';
 import './QueryForm.css';
+import { IResponseData } from '../Interfaces/Interfaces';
+import axios from 'axios';
 
 const collectFormValues = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
@@ -17,27 +19,36 @@ const collectFormValues = (e: React.FormEvent<HTMLFormElement>) => {
     return formObjects;
 }
 
-const getData = (e: React.FormEvent<HTMLFormElement>, setStateRef: React.Dispatch<React.SetStateAction<IRequestData>>) => {
+const makeApiCall = (apiKey: string, currency: string, year: string, month: string, day: string) => {
+  const requestString = "https://v6.exchangerate-api.com/v6/YOUR-API-KEY/history/USD/YEAR/MONTH/DAY";
+  axios.get(requestString)
+      .then(resp => console.log(resp));
+}
+
+const getData = (e: React.FormEvent<HTMLFormElement>, setStateRef: React.Dispatch<React.SetStateAction<IResponseData>>) => {
   e.preventDefault();
   const formValues = collectFormValues(e);
 
-  console.log('addFormElementsToParentState: ', formValues);
-  setStateRef({
-    apiKey: formValues[0].val,
-    currency: formValues[1].val,
-    date: formValues[2].val
-  });
+  console.log('formElements: ', formValues);
 
-}
+  const apiKey = "";
+  const currency = "";
+  const year = ""
+  const month = "";
+  const day = "";
 
-interface IRequestData {
-  apiKey: string,
-  currency: string,
-  date: string
+  makeApiCall(apiKey,	currency,	year,	month, day);
+
+  // setStateRef({
+  //   apiKey: formValues[0].val,
+  //   currency: formValues[1].val,
+  //   date: formValues[2].val
+  // });
+
 }
 
 interface IQueryFormProps {
-  setResponseData: React.Dispatch<React.SetStateAction<IRequestData>>
+  setResponseData: React.Dispatch<React.SetStateAction<IResponseData>>
 }
 
 const QueryForm = (props: IQueryFormProps) => {

@@ -11,7 +11,7 @@ export interface IResponseData {
     conversion_rates: IConversionRates
 }
 
-interface IConversionRates {
+export interface IConversionRates {
     USD: number,
     AED: number,
     AFN: number,

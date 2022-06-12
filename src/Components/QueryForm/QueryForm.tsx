@@ -5,6 +5,7 @@ import DateSelector from './DateSelector/DateSelector';
 import './QueryForm.css';
 import { IResponseData } from '../Interfaces/Interfaces';
 import axios from 'axios';
+import { API_KEY } from '../../apiKey';
 
 const collectFormValues = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
@@ -21,7 +22,7 @@ const collectFormValues = (e: React.FormEvent<HTMLFormElement>) => {
 
 const makeApiCall = (apiKey: string, currency: string, year: string, month: string, day: string, setStateRef: React.Dispatch<React.SetStateAction<IResponseData>>) => {
   //const requestString = `https://v6.exchangerate-api.com/v6/${apiKey}/history/${currency}/${year}/${month}/${day}`; //requires plan upgrade
-  const requestString = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${currency}/`;
+  const requestString = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${currency}/`;
   axios.get(requestString)
       .then(resp => {
         const respData: IResponseData = resp.data as IResponseData;

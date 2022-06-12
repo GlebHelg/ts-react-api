@@ -9,7 +9,7 @@ const MainLayout = () => {
 
   let [responseData, setResponseData] = useState<IResponseData>({} as IResponseData);
 
-  console.log('requestData: ', setResponseData);
+  console.log('state responseData: ', responseData);
 
   return (
     <div className="main-grid">
@@ -20,7 +20,7 @@ const MainLayout = () => {
         <QueryForm setResponseData={setResponseData}/>
       </div>
       <div className="response-presentation-wrapper">
-        <ResponsePresentation />
+        <ResponsePresentation responseData={responseData}/>
       </div>
     </div>
   );

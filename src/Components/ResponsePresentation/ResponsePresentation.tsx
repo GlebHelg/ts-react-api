@@ -1,22 +1,16 @@
 import React from 'react';
 import "./ResponsePresentation.css";
-import axios from "axios";
+import { IResponseData } from '../Interfaces/Interfaces';
 
-const makeRequest = () => {
-  axios({
-    method: 'get',
-    url: 'http://bit.ly/2mTM3nY',
-    responseType: 'stream'
-  })
-  .then( (response) => {
-    response.data.pipe()
-  });
+interface IResponsePresentationProps {
+  responseData: IResponseData
 }
 
-const ResponsePresentation = () => {
+const ResponsePresentation = (props: IResponsePresentationProps) => {
   return (
     <div className="response-presentation">
-      ResponsePresentation
+      ResponseData
+      {props.responseData.base_code}
     </div>
   );
 }

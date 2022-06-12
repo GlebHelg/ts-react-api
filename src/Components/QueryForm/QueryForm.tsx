@@ -26,7 +26,7 @@ const makeApiCall = (apiKey: string, currency: string, year: string, month: stri
       .then(resp => {
         const respData: IResponseData = resp.data as IResponseData;
         console.log('respData: ', respData);
-
+        setStateRef(respData);
       });
 }
 
@@ -38,17 +38,11 @@ const getData = (e: React.FormEvent<HTMLFormElement>, setStateRef: React.Dispatc
 
   const apiKey = formValues[0].val;
   const currency = formValues[1].val;
-  const year = formValues[2].val.split('-')[0];
-  const month = formValues[2].val.split('-')[1];
-  const day = formValues[2].val.split('-')[2];
+  const year  = '';//formValues[2].val.split('-')[0];
+  const month = '';//formValues[2].val.split('-')[1];
+  const day   = '';//formValues[2].val.split('-')[2];
 
   makeApiCall(apiKey,	currency,	year,	month, day, setStateRef);
-
-  // setStateRef({
-  //   apiKey: formValues[0].val,
-  //   currency: formValues[1].val,
-  //   date: formValues[2].val
-  // });
 
 }
 

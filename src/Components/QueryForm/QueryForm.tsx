@@ -22,7 +22,7 @@ const collectFormValues = (e: React.FormEvent<HTMLFormElement>) => {
 
 const makeApiCall = (apiKey: string, currency: string, year: string, month: string, day: string, setStateRef: React.Dispatch<React.SetStateAction<IResponseData>>) => {
   //const requestString = `https://v6.exchangerate-api.com/v6/${apiKey}/history/${currency}/${year}/${month}/${day}`; //requires plan upgrade
-  const requestString = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${currency}/`;
+  const requestString = `https://v6.exchangerate-api.com/v6/${apiKey.length < 24 ? API_KEY : apiKey}/latest/${currency}/`;
   axios.get(requestString)
       .then(resp => {
         const respData: IResponseData = resp.data as IResponseData;

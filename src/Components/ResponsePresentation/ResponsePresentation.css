@@ -5,6 +5,16 @@
     padding: 3px;
 }
 
+.response-table-wrapper{
+    max-height: 50vw;
+    overflow: auto;
+    
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
 div.response-table-wrapper > table{
     margin: 0 auto;
+
 }

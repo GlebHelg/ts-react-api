@@ -14,7 +14,7 @@ const MainLayout = () => {
   return (
     <div className="main-grid">
       <div className="heading">
-      heading
+        Currency Exchange Rates
       </div>
       <div className="query-selector-wrapper">
         <QueryForm setResponseData={setResponseData}/>

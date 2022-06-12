@@ -1,21 +1,22 @@
 .query-form{
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
-    max-width: 60vw;
+    overflow: auto;
+    max-width: 100%;
     margin: auto;
 }
 
-.api-connector{
+.api-selector{
     grid-area: 1 / 1 / 2 / 3;
     border: 1px;
     border-style: solid;
     border-color: black;
     padding: 3px;
+    min-width: -webkit-fill-available;
 }
+
+.api-selector > input {
+    max-width: -webkit-fill-available;
+}
+
 .date-selector {
     text-align: center;
     border: 1px;
@@ -23,6 +24,11 @@
     border-color: black;
     padding: 3px;
 }
+
+.date-selector > input {
+    max-width: -webkit-fill-available;
+}
+
 .currency-selector {
     grid-area: 2 / 1 / 3 / 3;
     text-align: center;

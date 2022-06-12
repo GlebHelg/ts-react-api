@@ -4,3 +4,7 @@
     border-color: black;
     padding: 3px;
 }
+
+div.response-table-wrapper > table{
+    margin: 0 auto;
+}

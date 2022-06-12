@@ -14,7 +14,8 @@ const MainLayout = () => {
   return (
     <div className="main-grid">
       <div className="heading">
-        Currency Exchange Rates
+        <h3>Currency Exchange Rates</h3>
+        <p>https://v6.exchangerate-api.com/v6/</p>
       </div>
       <div className="query-selector-wrapper">
         <QueryForm setResponseData={setResponseData}/>

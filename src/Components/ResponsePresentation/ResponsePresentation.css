@@ -3,10 +3,11 @@
     border-style: solid;
     border-color: black;
     padding: 3px;
+    overflow: auto;
 }
 
 .response-table-wrapper{
-    max-height: 50vw;
+    max-height: -webkit-fill-available;
     overflow: auto;
     
     border: 1px;

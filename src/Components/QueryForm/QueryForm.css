@@ -1,0 +1,38 @@
+.query-form{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+    max-width: 60vw;
+    margin: auto;
+}
+
+.api-connector{
+    grid-area: 1 / 1 / 2 / 3;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
+}
+.date-selector {
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
+}
+.currency-selector {
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 3px;
+}
+
+.submit-btn-wrapper{
+    grid-area: 3 / 1 / 4 / 3;
+    margin: 10px;
+}

@@ -1,10 +1,9 @@
 import React from 'react';
-import "./CurrencySelector.css";
 
 const CurrencySelector = () => {
   return (
     <div className="currency-selector">
-      <label htmlFor="currencies">Choose a currency</label>
+      <label htmlFor="currencies">Choose currency</label><br/>
       <select name="currencies" id="currencies">
         <option value="usd">US Dollar</option>
         <option value="nok">Norwegian krone</option>

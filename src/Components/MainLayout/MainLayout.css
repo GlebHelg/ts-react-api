@@ -1,9 +1,12 @@
 .main-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: auto auto 1fr 1fr 1fr 1fr auto auto;
+    /* grid-template-rows: repeat(7, 1fr); */
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    max-width: 60vw;
+    margin: auto;
 
     
     border: 1px;
@@ -12,8 +15,9 @@
     padding: 3px;
 }
     
-.heading { grid-area: 1 / 2 / 2 / 4; }
-.api-connector-wrapper { grid-area: 2 / 2 / 3 / 4; }
-.currency-selector-wrapper { grid-area: 3 / 1 / 4 / 3; }
-.date-selector-wrapper { grid-area: 3 / 3 / 4 / 5; }
-.response-presentation-wrapper { grid-area: 4 / 1 / 8 / 5; }
+.heading { grid-area: 1 / 2 / 1 / 4; }
+.query-selector-wrapper{
+    grid-area: 2 / 2 / 2 / 4;
+}
+
+.response-presentation-wrapper { grid-area: 3 / 1 / 8 / 5; }

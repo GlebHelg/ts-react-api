@@ -4,15 +4,26 @@
     border-color: black;
     padding: 3px;
     overflow: auto;
+    background: url('https://acegif.com/wp-content/gifs/raining-money-10.gif');
+}
+.response-heading-wrapper{
+    background-color: white;
+    margin: 20px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
 }
 
 .response-table-wrapper{
     max-height: -webkit-fill-available;
     overflow: auto;
     
-    border: 1px;
+    border: 2px;
     border-style: solid;
     border-color: black;
+
+    background-color: white;
+    margin: 20px;
 }
 
 div.response-table-wrapper > table{

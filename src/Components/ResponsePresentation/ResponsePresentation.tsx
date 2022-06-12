@@ -37,8 +37,10 @@ const ResponsePresentation = (props: IResponsePresentationProps) => {
 
   return (
     <div className="response-presentation">
-      <h4>Response Data</h4>
-      <h5>{props.responseData.base_code}</h5>
+      <div className="response-heading-wrapper">
+        <h4>Response Data</h4>
+        <h5>{props.responseData.base_code}</h5>
+      </div>
       <div className="response-table-wrapper">
         {props.responseData.conversion_rates ? getConversionRatesJsx(props.responseData.conversion_rates) : <p>No Data</p>}
       </div>

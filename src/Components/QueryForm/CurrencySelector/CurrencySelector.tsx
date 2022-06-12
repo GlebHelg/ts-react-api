@@ -8,7 +8,7 @@ const CurrencySelector = () => {
         <option value="usd">US Dollar</option>
         <option value="nok">Norwegian krone</option>
         <option value="gbp">Pound sterling</option>
-        <option value="sek">Svedish krone</option>
+        <option value="sek">Swedish krone</option>
       </select>
     </div>
   );
